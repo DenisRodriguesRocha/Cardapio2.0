@@ -114,6 +114,9 @@ function updateCartModal() {
     });
 
     cartCounter.innerHTML = cart.length;
+
+    checkboxWarn.classList.add("hidden");
+    checkboxWarn.classList.remove("border-red-500");
 }
 
 //Funcao para remover o item do carrinho
@@ -162,6 +165,7 @@ checkoutBtn.addEventListener("click", function () {
     }
 
     // Verificar se pelo menos um checkbox está marcado
+     
     if (!pix.checked && !cartao.checked && !dinheiro.checked) {
         checkboxWarn.classList.remove("hidden");
         checkboxWarn.classList.add("border-red-500");
